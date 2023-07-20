@@ -29,7 +29,7 @@ public class TetraknifeItemInHandTickProcedure {
 			}
 			if ((entity.getCapability(KzeKnifeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KzeKnifeModVariables.PlayerVariables())).Tetra_knife_number > 1) {
 				if ((entity.getCapability(KzeKnifeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KzeKnifeModVariables.PlayerVariables())).Tetra_knife_pick1 == false) {
-					if (itemstack.getItem() instanceof TetraknifeItem)
+					if (itemstack.getItem() instanceof SurvivalknifeItem)
 						itemstack.getOrCreateTag().putString("geckoAnim", "pick1");
 					{
 						boolean _setval = true;
@@ -46,7 +46,7 @@ public class TetraknifeItemInHandTickProcedure {
 						});
 					}
 				} else {
-					if (itemstack.getItem() instanceof TetraknifeItem)
+					if (itemstack.getItem() instanceof SurvivalknifeItem)
 						itemstack.getOrCreateTag().putString("geckoAnim", "pick1_sub");
 					{
 						boolean _setval = false;
@@ -58,7 +58,7 @@ public class TetraknifeItemInHandTickProcedure {
 				}
 			} else if ((entity.getCapability(KzeKnifeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KzeKnifeModVariables.PlayerVariables())).Tetra_knife_number == 1) {
 				if ((entity.getCapability(KzeKnifeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KzeKnifeModVariables.PlayerVariables())).Tetra_knife_pick2 == false) {
-					if (itemstack.getItem() instanceof TetraknifeItem)
+					if (itemstack.getItem() instanceof SurvivalknifeItem)
 						itemstack.getOrCreateTag().putString("geckoAnim", "pick2");
 					{
 						boolean _setval = false;
@@ -75,7 +75,7 @@ public class TetraknifeItemInHandTickProcedure {
 						});
 					}
 				} else {
-					if (itemstack.getItem() instanceof TetraknifeItem)
+					if (itemstack.getItem() instanceof SurvivalknifeItem)
 						itemstack.getOrCreateTag().putString("geckoAnim", "pick2_sub");
 					{
 						boolean _setval = false;
