@@ -1,0 +1,13 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/diamond_hoe"
+	},
+	"overrides": [
+                { "predicate": {"custom_model_data":1031}, "model": "item/survivalknife"},
+                { "predicate": {"custom_model_data":1171}, "model": "item/rawfish"},
+                { "predicate": {"custom_model_data":1131}, "model": "item/fountain_pen"},
+                { "predicate": {"custom_model_data":1040}, "model": "item/crowbar"},
+                { "predicate": {"custom_model_data":1141}, "model": "item/tetraknife"}
+        ]
+}

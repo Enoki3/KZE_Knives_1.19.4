@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[45,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="kze_knife"
+version="1.0.0"
+displayName="KZE_Knife"
+credits=""
+displayURL=""
+authors="Enokidake"
+
+[[dependencies.kze_knife]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.4]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+[[dependencies.kze_knife]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
