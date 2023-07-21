@@ -1,16 +1,14 @@
 package kzeknife.procedures;
 
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
-
+import kzeknife.item.SurvivalknifeItem;
 import kzeknife.network.KzeKnifeModVariables;
-
-import kzeknife.item.TetraknifeItem;
+import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 
 public class TetraknifeItemInHandTickProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {

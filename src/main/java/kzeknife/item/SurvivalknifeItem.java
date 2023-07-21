@@ -4,6 +4,8 @@ package kzeknife.item;
 import java.util.function.Consumer;
 
 import kzeknife.item.renderer.SurvivalknifeItemRenderer;
+import kzeknife.procedures.RawfishItemInHandTickProcedure;
+import kzeknife.procedures.RawfishItemInInventoryTickProcedure;
 import kzeknife.procedures.SurvivalknifeItemInHandTickProcedure;
 import kzeknife.procedures.SurvivalknifeItemInInventoryTickProcedure;
 import kzeknife.procedures.TetraknifeItemInHandTickProcedure;
@@ -97,10 +99,14 @@ public class SurvivalknifeItem extends HoeItem implements GeoItem {
             if (selected)
                 SurvivalknifeItemInHandTickProcedure.execute(entity, itemstack);
             SurvivalknifeItemInInventoryTickProcedure.execute(entity);
-        } else {
+        } else if (id == 1141) {
             if (selected)
                 TetraknifeItemInHandTickProcedure.execute(entity, itemstack);
             TetraknifeItemInInventoryTickProcedure.execute(entity);
+        } else {
+        	if (selected)
+                RawfishItemInHandTickProcedure.execute(entity, itemstack);
+            RawfishItemInInventoryTickProcedure.execute(entity);
         }
     }
 }

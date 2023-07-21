@@ -12,23 +12,32 @@ public class SurvivalknifeItemModel extends GeoModel<SurvivalknifeItem> {
     public ResourceLocation getAnimationResource(SurvivalknifeItem animatable) {
         if (customModelData == 1031) {
             return new ResourceLocation("kze_knife", "animations/survival_knife.animation.json");
-        }
-        return new ResourceLocation("kze_knife", "animations/tetra_knife.animation.json");
+        } else if (customModelData == 1141) {
+            return new ResourceLocation("kze_knife", "animations/tetra_knife.animation.json");
+        } else {
+            return new ResourceLocation("kze_knife", "animations/raw_fish.animation.json");
+        } 
     }
 
     @Override
     public ResourceLocation getModelResource(SurvivalknifeItem animatable) {
         if (customModelData == 1031) {
             return new ResourceLocation("kze_knife", "geo/survival_knife.geo.json");
-        }
-        return new ResourceLocation("kze_knife", "geo/tetra_knife.geo.json");
+        } else if (customModelData == 1141) {
+        	return new ResourceLocation("kze_knife", "geo/tetra_knife.geo.json");
+        } else {
+        	return new ResourceLocation("kze_knife", "geo/raw_fish.geo.json");
+        } 
     }
 
     @Override
     public ResourceLocation getTextureResource(SurvivalknifeItem animatable) {
         if (customModelData == 1031) {
             return new ResourceLocation("kze_knife", "textures/item/survival_knife.png");
+        } else if (customModelData == 1141) {
+        	return new ResourceLocation("kze_knife", "textures/item/tetra_knife.png");
+        } else {
+        	return new ResourceLocation("kze_knife", "textures/item/raw_fish.png");
         }
-        return new ResourceLocation("kze_knife", "textures/item/tetra_knife.png");
     }
 }
