@@ -4,6 +4,10 @@ package kzeknife.item;
 import java.util.function.Consumer;
 
 import kzeknife.item.renderer.SurvivalknifeItemRenderer;
+import kzeknife.procedures.CrowbariteminhandtickProcedure;
+import kzeknife.procedures.CrowbaritemininventorytickProcedure;
+import kzeknife.procedures.PenknifeItemInHandTickProcedure;
+import kzeknife.procedures.PenknifeItemInInventoryTickProcedure;
 import kzeknife.procedures.RawfishItemInHandTickProcedure;
 import kzeknife.procedures.RawfishItemInInventoryTickProcedure;
 import kzeknife.procedures.SurvivalknifeItemInHandTickProcedure;
@@ -99,11 +103,19 @@ public class SurvivalknifeItem extends HoeItem implements GeoItem {
             if (selected)
                 SurvivalknifeItemInHandTickProcedure.execute(entity, itemstack);
             SurvivalknifeItemInInventoryTickProcedure.execute(entity);
-        } else if (id == 1141) {
+        } else if (id == 1040) {
             if (selected)
+                CrowbariteminhandtickProcedure.execute(entity, itemstack);
+            CrowbaritemininventorytickProcedure.execute(entity);
+        } else if (id == 1131){
+        	if (selected)
+                PenknifeItemInHandTickProcedure.execute(entity, itemstack);
+            PenknifeItemInInventoryTickProcedure.execute(entity);
+        } else if (id == 1141){
+        	if (selected)
                 TetraknifeItemInHandTickProcedure.execute(entity, itemstack);
             TetraknifeItemInInventoryTickProcedure.execute(entity);
-        } else {
+        } else if (id == 1171){
         	if (selected)
                 RawfishItemInHandTickProcedure.execute(entity, itemstack);
             RawfishItemInInventoryTickProcedure.execute(entity);

@@ -1,16 +1,14 @@
 package kzeknife.procedures;
 
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
-
+import kzeknife.item.SurvivalknifeItem;
 import kzeknife.network.KzeKnifeModVariables;
-
-import kzeknife.item.PenknifeItem;
+import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 
 public class PenknifeItemInHandTickProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
@@ -29,7 +27,7 @@ public class PenknifeItemInHandTickProcedure {
 			}
 			if ((entity.getCapability(KzeKnifeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KzeKnifeModVariables.PlayerVariables())).Pen_knife_number > 1) {
 				if ((entity.getCapability(KzeKnifeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KzeKnifeModVariables.PlayerVariables())).Pen_knife_pick1 == false) {
-					if (itemstack.getItem() instanceof PenknifeItem)
+					if (itemstack.getItem() instanceof SurvivalknifeItem)
 						itemstack.getOrCreateTag().putString("geckoAnim", "pick1");
 					{
 						boolean _setval = true;
@@ -46,7 +44,7 @@ public class PenknifeItemInHandTickProcedure {
 						});
 					}
 				} else {
-					if (itemstack.getItem() instanceof PenknifeItem)
+					if (itemstack.getItem() instanceof SurvivalknifeItem)
 						itemstack.getOrCreateTag().putString("geckoAnim", "pick1_sub");
 					{
 						boolean _setval = false;
@@ -58,7 +56,7 @@ public class PenknifeItemInHandTickProcedure {
 				}
 			} else if ((entity.getCapability(KzeKnifeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KzeKnifeModVariables.PlayerVariables())).Pen_knife_number == 1) {
 				if ((entity.getCapability(KzeKnifeModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KzeKnifeModVariables.PlayerVariables())).Pen_knife_pick2 == false) {
-					if (itemstack.getItem() instanceof PenknifeItem)
+					if (itemstack.getItem() instanceof SurvivalknifeItem)
 						itemstack.getOrCreateTag().putString("geckoAnim", "pick2");
 					{
 						boolean _setval = false;
@@ -75,7 +73,7 @@ public class PenknifeItemInHandTickProcedure {
 						});
 					}
 				} else {
-					if (itemstack.getItem() instanceof PenknifeItem)
+					if (itemstack.getItem() instanceof SurvivalknifeItem)
 						itemstack.getOrCreateTag().putString("geckoAnim", "pick2_sub");
 					{
 						boolean _setval = false;
