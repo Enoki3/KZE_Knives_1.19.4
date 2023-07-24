@@ -1,22 +1,19 @@
 package kzeknife.init;
 
-import software.bernie.geckolib.animatable.GeoItem;
-
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.client.renderer.ItemInHandRenderer;
-import net.minecraft.client.Minecraft;
-
-import kzeknife.item.TetraknifeItem;
-import kzeknife.item.SurvivalknifeItem;
-import kzeknife.item.RawfishItem;
-import kzeknife.item.PenknifeItem;
-import kzeknife.item.CrowbarItem;
-
 import java.lang.reflect.Field;
+
+import kzeknife.item.CrowbarItem;
+import kzeknife.item.PenknifeItem;
+import kzeknife.item.RawfishItem;
+import kzeknife.item.SurvivalknifeItem;
+import kzeknife.item.TetraknifeItem;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemInHandRenderer;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import software.bernie.geckolib.animatable.GeoItem;
 
 @Mod.EventBusSubscriber
 public class ItemAnimationFactory {
@@ -53,7 +50,8 @@ public class ItemAnimationFactory {
 				if (event.player.getMainHandItem().getItem() instanceof SurvivalknifeItem animatable)
 					if (event.player.level.isClientSide()) {
 						animatable.animationprocedure = animation;
-						disableUseAnim();
+						animatable.currentSelectId = event.player.getMainHandItem().getOrCreateTag().getInt("CustomModelData");
+						//disableUseAnim();
 					}
 				if (event.player.getMainHandItem().getItem() instanceof CrowbarItem animatable)
 					if (event.player.level.isClientSide()) {

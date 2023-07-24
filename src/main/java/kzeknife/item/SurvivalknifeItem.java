@@ -34,6 +34,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class SurvivalknifeItem extends HoeItem implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+	public int currentSelectId = -1;
 	public String animationprocedure = "empty";
 	public static ItemDisplayContext transformType;
 
@@ -58,20 +59,39 @@ public class SurvivalknifeItem extends HoeItem implements GeoItem {
 		this.transformType = type;
 	}
 
-	private PlayState idlePredicate(AnimationState event) {
+	private PlayState idlePredicate(AnimationState<SurvivalknifeItem> event) {
 		if (this.transformType != null ? this.transformType.firstPerson() : false) {
 			if (this.animationprocedure.equals("empty")) {
-				event.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));
+				String prefix = switch (currentSelectId) {
+				case 1031 -> "survival_knife_";
+				case 1040 -> "crowbar_";
+				case 1131 -> "pen_knife_";
+				case 1141 -> "tetra_knife_";
+				case 1171 -> "raw_fish_";
+				default -> "";
+				};
+				if (prefix.equals("")) return PlayState.CONTINUE;
+				event.getController().setAnimation(RawAnimation.begin().thenLoop(prefix + "idle"));
 				return PlayState.CONTINUE;
 			}
 		}
 		return PlayState.STOP;
 	}
 
-	private PlayState procedurePredicate(AnimationState event) {
+	private PlayState procedurePredicate(AnimationState<SurvivalknifeItem> event) {
 		if (this.transformType != null ? this.transformType.firstPerson() : false) {
 			if (!(this.animationprocedure.equals("empty"))) {
-				event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
+				String prefix = switch (currentSelectId) {
+					case 1031 -> "survival_knife_";
+					case 1040 -> "crowbar_";
+					case 1131 -> "pen_knife_";
+					case 1141 -> "tetra_knife_";
+					case 1171 -> "raw_fish_";
+					default -> "";	
+				};
+				if (prefix.equals("")) return PlayState.CONTINUE;
+				
+				event.getController().setAnimation(RawAnimation.begin().thenPlay(prefix + this.animationprocedure));
 				if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 					this.animationprocedure = "empty";
 					event.getController().forceAnimationReset();
