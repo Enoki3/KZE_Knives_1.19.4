@@ -21,7 +21,7 @@
 			}
 		},
 		"survival_knife_pick1": {
-			"animation_length": 1,
+			"animation_length": 1.20,
 			"bones": {
 				"bone": {
 					"relative_to": {
@@ -67,7 +67,7 @@
 			}
 		},
 		"survival_knife_pick2": {
-			"animation_length": 2.51,
+			"animation_length": 2.7,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -159,7 +159,7 @@
 			}
 		},
 		"survival_knife_pick3": {
-			"animation_length": 0.75,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -267,7 +267,7 @@
 			}
 		},
 		"survival_knife_pick2_sub": {
-			"animation_length": 2.51,
+			"animation_length": 2.70,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -359,7 +359,7 @@
 			}
 		},
 		"survival_knife_pick3_sub": {
-			"animation_length": 0.75,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -422,7 +422,7 @@
 		},
 		"crowbar_idle": {				
 			"loop": true,
-			"animation_length": 2.01,
+			"animation_length": 2.00,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -443,7 +443,7 @@
 			}
 		},
 		"crowbar_pick1": {
-			"animation_length": 0.75,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -484,7 +484,7 @@
 			}
 		},
 		"crowbar_pick2": {
-			"animation_length": 1,
+			"animation_length": 1.20,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -523,7 +523,7 @@
 			}
 		},
 		"crowbar_pick1_sub": {
-			"animation_length": 0.75,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -564,7 +564,7 @@
 			}
 		},
 		"crowbar_pick2_sub": {
-			"animation_length": 1,
+			"animation_length": 1.20,
 			"bones": {
 				"bone": {
 					"rotation": {

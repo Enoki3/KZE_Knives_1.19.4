@@ -24,7 +24,7 @@
 			}
 		},
 		"pick1": {
-			"animation_length": 0.75,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -65,7 +65,7 @@
 			}
 		},
 		"pick2": {
-			"animation_length": 1,
+			"animation_length": 1.21,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -104,7 +104,7 @@
 			}
 		},
 		"pick1_sub": {
-			"animation_length": 0.75,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -145,7 +145,7 @@
 			}
 		},
 		"pick2_sub": {
-			"animation_length": 1,
+			"animation_length": 1.21,
 			"bones": {
 				"bone": {
 					"rotation": {

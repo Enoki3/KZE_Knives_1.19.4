@@ -21,7 +21,7 @@
 			}
 		},
 		"pick1": {
-			"animation_length": 1,
+			"animation_length": 1.20,
 			"bones": {
 				"bone": {
 					"relative_to": {
@@ -67,7 +67,7 @@
 			}
 		},
 		"pick2": {
-			"animation_length": 2.51,
+			"animation_length": 2.7,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -159,7 +159,7 @@
 			}
 		},
 		"pick3": {
-			"animation_length": 0.75,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -221,7 +221,7 @@
 			}
 		},
 		"pick1_sub": {
-			"animation_length": 1,
+			"animation_length": 1.20,
 			"bones": {
 				"bone": {
 					"relative_to": {
@@ -267,7 +267,7 @@
 			}
 		},
 		"pick2_sub": {
-			"animation_length": 2.51,
+			"animation_length": 2.7,
 			"bones": {
 				"bone": {
 					"rotation": {
@@ -359,7 +359,7 @@
 			}
 		},
 		"pick3_sub": {
-			"animation_length": 0.75,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
