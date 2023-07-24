@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "kzeknife.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.kze_knife.refmap.json",
+  "mixins": [
+    "MixinPack",
+    "MixinPackRepository"
+  ]
+}
