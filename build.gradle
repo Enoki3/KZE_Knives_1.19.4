@@ -12,6 +12,11 @@ archivesBaseName = 'modid'
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
+mixin {
+    add sourceSets.main, "mixins.kze_knife.refmap.json"
+    config "kze_knife.mixins.json"
+}
+
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
     // The mappings can be changed at any time and must be in the following format.
@@ -131,7 +136,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.19.4-45.1.16'
-
+    annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
 
@@ -167,12 +172,12 @@ jar.finalizedBy('reobfJar')
 repositories {
     maven {
         name = 'GeckoLib'
-        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' 
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
     }
 }
 
 dependencies {
-        implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19.4:4.2')
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19.4:4.2')
 }
 
 tasks.withType(JavaCompile).configureEach {
